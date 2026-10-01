@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Climate Reanalyzer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="background-overlay"></div>
+    <div class="stars"></div>
+
+    <div id="app">
+      <header class="hero-section">
+        <div class="hero-content">
+          <h1 class="main-title">
+            <span class="title-highlight">Climate</span> Reanalyzer
+          </h1>
+          <h2 class="subtitle">
+            Various Global Maps Collected by the Climate Reanalyzer at the
+            <span class="university-highlight">University of Maine</span>
+          </h2>
+        </div>
+      </header>
+
+      <div class="subheader">
+        <h2 class="subheader-title">Daily Weather Maps</h2>
+        <div class="subheader-divider"></div>
+      </div>
+
+      <main class="content-section">
+        
+        <div class="buttons-container">
+          <div class="buttons">
+            <button
+              onclick="navigateTo('pages/temperature.html')"
+              class="nav-button featured"
+            >
+              <span class="button-text">
+                <strong>Air Temperature</strong>
+                <small>Interactive temperature overlays</small>
+              </span>
+            </button>
+
+            <button
+              onclick="navigateTo('pages/temperature-anomaly.html')"
+              class="nav-button"
+            >
+              <span class="button-text">
+                <strong>Air Temperature Anomaly</strong>
+                <small>Deviation from average temperature</small>
+              </span>
+            </button>
+
+            <button
+              onclick="navigateTo('pages/sea-surface-temperature.html')"
+              class="nav-button"
+            >
+              <span class="button-text">
+                <strong>Sea Surface Temperature</strong>
+                <small>Ocean thermal mapping</small>
+              </span>
+            </button>
+
+            <button
+              onclick="navigateTo('pages/sea-level-pressure.html')"
+              class="nav-button"
+            >
+              <span class="button-text">
+                <strong>Sea Level Pressure</strong>
+                <small>Mean atmospheric pressures at sea level</small>
+              </span>
+            </button>
+
+            <button
+              onclick="navigateTo('pages/precipitation.html')"
+              class="nav-button"
+            >
+              <span class="button-text">
+                <strong>Precipitation</strong>
+                <small>Rainfall and weather patterns</small>
+              </span>
+            </button>
+
+            <button
+              onclick="navigateTo('pages/wind.html')"
+              class="nav-button"
+            >
+              <span class="button-text">
+                <strong>Wind</strong>
+                <small>Wind speed maps</small>
+              </span>
+            </button>
+
+            <button
+              onclick="navigateTo('pages/jetstream.html')"
+              class="nav-button"
+            >
+              <span class="button-text">
+                <strong>Jetstream</strong>
+                <small>Atmospheric jetstream patterns</small>
+              </span>
+            </button>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer-section">
+        <div class="logo-container">
+          <div class="logo-item">
+            <img
+              src="assets/finalLogo.png"
+              alt="V-Model Violets Logo"
+              width="60"
+              height="60"
+              onerror="this.style.display = 'none'"
+            />
+          </div>
+          <div class="logo-text">
+            <h3>V-Model Violets</h3>
+            <p>University of Maine</p>
+          </div>
+          <div class="logo-item">
+            <img
+              src="assets/university_of_maine_logo-freelogovectors.net_-2706234335.png"
+              alt="UMaine Logo"
+              width="70"
+              height="50"
+              onerror="this.style.display = 'none'"
+            />
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

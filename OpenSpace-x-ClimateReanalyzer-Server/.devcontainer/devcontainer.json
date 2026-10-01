@@ -1,0 +1,22 @@
+{
+  "name": "OpenSpace-AHTSE-Server",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/git-lfs:1": {}
+  },
+
+  // Run setup + genconf once when the container is created
+    "postCreateCommand": "apt update && apt install -y python3-pip python3-venv && python3 -m venv .venv && .venv/bin/pip install -r tests/requirements.txt && bash setup-ahtse-dev.sh && bash genconf.sh",
+
+    // Start Apache on container start (no sudo needed if we use root)
+  "postStartCommand": "service apache2 start",
+
+  // Forward port 80 from the container to your host
+  "forwardPorts": [80],
+
+  // Use root inside the container so setup scripts and Apache commands
+  // don't need sudo. (Optional: you can switch to vscode + sudo if you prefer.)
+  "remoteUser": "root"
+}
